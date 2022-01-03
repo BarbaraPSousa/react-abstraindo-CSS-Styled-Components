@@ -4,6 +4,9 @@ export const Icone = styled.img`
   height: 25px;
   width: 25px;
 `;
+export const IconeTema = styled(Icone)`
+  filter: ${({ theme }) => theme.filter};
+`;
 
 export const Box = styled.div`
   display: flex;
@@ -45,10 +48,10 @@ export const Saldo = styled.div`
 `;
 
 export const BtnTema = styled.button`
-position: absolute;
-top: 4vh;
-right: 20px;
-background-color: inherit;
-border: none;
-cursor: pointer
-`
+  position: absolute;
+  top: 4vh;
+  right: 20px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+`;

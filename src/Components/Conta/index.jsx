@@ -5,11 +5,18 @@ import olho_icone from "../../assets/images/olho.svg";
 import dinheiro from "../../assets/images/dinheiro.svg";
 
 import styled from "styled-components";
-import { Icone, Box, Botao, Detalhe, Saldo } from "../../Components/UI/index"
+import {
+  Icone,
+  Box,
+  Botao,
+  Detalhe,
+  Saldo,
+  IconeTema,
+} from "../../Components/UI/index";
 
 const IconeMargin = styled(Icone)`
-margen-top: 2px;
-`
+  margen-top: 2px;
+`;
 
 const Conta = () => {
   const [toggleState, untoggle] = useState(true);
@@ -24,7 +31,7 @@ const Conta = () => {
       <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
-          <Icone src={dinheiro} alt="Ícone Saldo" />
+          <IconeTema src={dinheiro} alt="Ícone Saldo" />
         </span>
         {toggleState ? (
           <Saldo>
@@ -34,7 +41,7 @@ const Conta = () => {
       </div>
 
       <Botao onClick={toggleHandler}>
-        <IconeMargin 
+        <IconeMargin
           src={toggleState ? privado : olho_icone}
           alt="Privacidade do Saldo"
         />
